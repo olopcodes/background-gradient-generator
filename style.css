@@ -19,7 +19,16 @@ body {
   width: 90%;
 }
 
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: .8;
+}
+
 h1 {
+  font-size: 1.75rem;
   margin-bottom: 2rem;
 }
 
@@ -31,7 +40,8 @@ h2 {
 .gradient-box {
   position: relative;
   height: 200px;
-  width: 400px;
+  width: 90%;
+  max-width: 400px;
   margin: auto;
   background-color: #333;
   border-radius: 5px;
@@ -52,13 +62,54 @@ h2 {
   /* padding: 1rem; */
 }
 
+
+
+.btn-directions {
+  font-size: 7px;
+  display: grid;
+  grid-template-columns: 18px 18px 18px;
+  grid-template-areas: 
+        ". up ."
+        "left . right"
+        ". down .";
+    gap: 2px;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+.btn-directions button {
+  
+  font-size: 10px;
+}
+
+#btn-up {
+  grid-area: up;
+}
+
+#btn-right {
+  grid-area: right;
+}
+
+#btn-left {
+  grid-area: left;
+}
+
+#btn-down {
+  grid-area: down;
+}
+
 .btn-copy {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  cursor: pointer;
   background-color: transparent;
   border: none;
   color: snow;
   font-size: 1rem;
+}
+
+@media screen and (min-width: 400px) {
+  h1 {
+    font-size: 2.25rem;
+  }
 }
